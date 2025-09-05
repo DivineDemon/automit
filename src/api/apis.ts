@@ -1,15 +1,18 @@
 export const postToWorkflow = async (username: string, repo: string, content: string) => {
-  const response = await fetch("https://n8n-hdw9.onrender.com/webhook/52174b3c-7cb9-4ead-ae45-f296af5d188e", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      username,
-      repo,
-      content,
-    }),
-  });
+  const response = await fetch(
+    "https://n8n.scintia.ai/webhook/52174b3c-7cb9-4ead-ae45-f296af5d188e",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username,
+        repo,
+        content,
+      }),
+    }
+  );
 
   return response;
 };
